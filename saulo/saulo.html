@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Portafolio - Saulo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #eaeaea;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #555;
+    }
+
+    section {
+      display: none;
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MI PORTAFOLIO</h1>
+    <p>
+       SAULO 
+     
+    </p>
+  </header>
+
+  <nav>
+    <a href="#inicio" onclick="showTab('inicio')">Inicio</a>
+    <a href="#marcos" onclick="showTab('marcos')">Marcos</a>
+    <a href="#fgrande" onclick="showTab('fgrande')">F.grande</a>
+    <a href="#articulos" onclick="showTab('articulos')">Artículos</a>
+  </nav>
+<section id="inicio" class="active">
+    <div class="gallery">
+      Me presento, soy Saulo un caligrafo apasionado por los trazos firmes y elegantes. La caligrafía experimental es mi especialidad. Abierto a cualquier formato y tipo de técnica, adaptándome a tu propuesta o proyecto. Desde formato A4, hasta murales de m².
+    </div>
+  </section>
+
+  <section id="marcos" class="active">
+    <div class="gallery">
+      <img src="marco 1.jpeg" alt="Marco 1">
+      <img src="marco 2.jpeg" alt="Marco 2">
+      <img src="marco 3.jpeg" alt="Marco 3">
+      <img src="marco 4.jpeg" alt="Marco 4">
+      <img src="marco 5.jpeg" alt="Marco 5">
+    </div>
+  </section>
+
+  <section id="fgrande">
+    <div class="gallery">
+      <img src="F1.jpeg" alt="F.grande 1">
+      <img src="F2.jpeg" alt="F.grande 2">
+      <img src="F3.jpeg" alt="F.grande 3">
+      <img src="F4.jpeg" alt="F.grande 4">
+      <img src="" alt="F.grande 5">
+    </div>
+  </section>
+
+  <section id="articulos">
+    <div class="gallery">
+      <img src="ARTICULO 1.jpeg" alt="Artículo 1">
+      <img src="https://via.placeholder.com/400x300?text=Artículo+2" alt="Artículo 2">
+      <img src="https://via.placeholder.com/400x300?text=Artículo+3" alt="Artículo 3">
+      <img src="https://via.placeholder.com/400x300?text=Artículo+4" alt="Artículo 4">
+      <img src="https://via.placeholder.com/400x300?text=Artículo+5" alt="Artículo 5">
+    </div>
+  </section>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
